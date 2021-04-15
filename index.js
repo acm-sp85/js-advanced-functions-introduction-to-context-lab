@@ -13,7 +13,7 @@ function createEmployeeRecord (array) {
 
         
     }
-    
+    // console.log(testEmployee)
     return testEmployee;
     
     
@@ -33,15 +33,43 @@ function createEmployeeRecords(twoRows){
         
     });
     
-    console.log(array)
+    // console.log(array)
 
     return array;
     
     }
 
-createEmployeeRecords([
-    ["moe", "sizlak", "barkeep", 2],
-    ["bartholomew", "simpson", "scamp", 3]
-  ])
+
+function createTimeInEvent(objectEmployee,timeString){
+
+    
+
+    const stringToArray =timeString.split(" ");
+    const [date , hour] = stringToArray;
+    const newEvent = {
+        type: "TimeIn",
+        date: date,
+        hour: hour
+    }
+    objectEmployee.timeInEvents.push(newEvent)
+    console.log(newEvent.type)
+    console.log(newEvent.date)
+    console.log(newEvent.hour)
+
+    console.log(objectEmployee)
+
+
+    
+    return objectEmployee
+
+    
+}
+let bpRecord = createEmployeeRecord(["moe", "sizlak", "barkeep", 2])
+
+createTimeInEvent(bpRecord,"2014-02-28 1400") 
+
+
+
+
 
 
