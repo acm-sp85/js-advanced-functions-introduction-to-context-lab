@@ -231,43 +231,9 @@ function calculatePayroll(arrayOfEmployees) {
 
 function findEmployeeByFirstName (arrayOfEmployees,firstNameGiven){
 
-    const listOfEmployees = []
-    arrayOfEmployees.forEach(element => {
-
-        listOfEmployees.push(createEmployeeRecord(element))
-        
-    });
 
 
-listOfEmployees.forEach(element => {
-
-    if(element.firstName === firstNameGiven){
-        console.log(element)
-        return element
-    } else {
-        console.log(undefined)
-        return undefined
-            
-}
-});
-
-
-
-
-
-    // listOfEmployees.filter(function(employee) {
-    //     if (employee.firstName === firstNameGiven){
-
-    //         console.log(employee.familyName)
-    //         return employee
-    //     } 
-    //     else {
-    //         console.log(undefined)
-    //         return undefined
-    //     }
-        
-        
-    // })
+    return arrayOfEmployees.find(element=> element.firstName === firstNameGiven)
 
 }
 
