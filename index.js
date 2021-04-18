@@ -72,51 +72,51 @@ function createTimeOutEvent(objectEmployee,timeString){
 }
 
 //RUNNING TESTS
-let bpRecord = createEmployeeRecord(["moe", "sizlak", "barkeep", 2])
+// let bpRecord = createEmployeeRecord(["moe", "sizlak", "barkeep", 2])
 
-createTimeInEvent(bpRecord,"2013-02-22 1400") 
-createTimeOutEvent(bpRecord,"2013-02-22 1600")
-createTimeInEvent(bpRecord,"2013-01-1 0900") 
-createTimeOutEvent(bpRecord,"2013-01-1 1000")
-createTimeInEvent(bpRecord,"2013-11-5 0900") 
-createTimeOutEvent(bpRecord,"2013-11-5 1900")
-createTimeInEvent(bpRecord,"2013-10-15 1400") 
-createTimeOutEvent(bpRecord,"2013-10-15 1600")
-createTimeInEvent(bpRecord,"2013-11-1 0900") 
-createTimeOutEvent(bpRecord,"2013-11-1 1000")
-createTimeInEvent(bpRecord,"2013-12-5 0900") 
-createTimeOutEvent(bpRecord,"2013-12-5 1900")
+// createTimeInEvent(bpRecord,"2013-02-22 1400") 
+// createTimeOutEvent(bpRecord,"2013-02-22 1600")
+// createTimeInEvent(bpRecord,"2013-01-1 0900") 
+// createTimeOutEvent(bpRecord,"2013-01-1 1000")
+// createTimeInEvent(bpRecord,"2013-11-5 0900") 
+// createTimeOutEvent(bpRecord,"2013-11-5 1900")
+// createTimeInEvent(bpRecord,"2013-10-15 1400") 
+// createTimeOutEvent(bpRecord,"2013-10-15 1600")
+// createTimeInEvent(bpRecord,"2013-11-1 0900") 
+// createTimeOutEvent(bpRecord,"2013-11-1 1000")
+// createTimeInEvent(bpRecord,"2013-12-5 0900") 
+// createTimeOutEvent(bpRecord,"2013-12-5 1900")
 
-let bpRecord2 = createEmployeeRecord(["bart", "simpson", "rascal", 3])
+// let bpRecord2 = createEmployeeRecord(["bart", "simpson", "rascal", 3])
 
-createTimeInEvent(bpRecord2,"2014-02-23 1400") 
-createTimeOutEvent(bpRecord2,"2014-02-23 1600")
-createTimeInEvent(bpRecord2,"2014-01-1 0900") 
-createTimeOutEvent(bpRecord2,"2014-01-1 1000")
-createTimeInEvent(bpRecord2,"2014-11-5 0900") 
-createTimeOutEvent(bpRecord2,"2014-11-5 1900")
-createTimeInEvent(bpRecord2,"2014-10-15 1400") 
-createTimeOutEvent(bpRecord2,"2014-10-15 1600")
-createTimeInEvent(bpRecord2,"2014-11-1 0900") 
-createTimeOutEvent(bpRecord2,"2014-11-1 1000")
-createTimeInEvent(bpRecord2,"2014-12-5 0900") 
-createTimeOutEvent(bpRecord2,"2014-12-5 1900")
+// createTimeInEvent(bpRecord2,"2014-02-23 1400") 
+// createTimeOutEvent(bpRecord2,"2014-02-23 1600")
+// createTimeInEvent(bpRecord2,"2014-01-1 0900") 
+// createTimeOutEvent(bpRecord2,"2014-01-1 1000")
+// createTimeInEvent(bpRecord2,"2014-11-5 0900") 
+// createTimeOutEvent(bpRecord2,"2014-11-5 1900")
+// createTimeInEvent(bpRecord2,"2014-10-15 1400") 
+// createTimeOutEvent(bpRecord2,"2014-10-15 1600")
+// createTimeInEvent(bpRecord2,"2014-11-1 0900") 
+// createTimeOutEvent(bpRecord2,"2014-11-1 1000")
+// createTimeInEvent(bpRecord2,"2014-12-5 0900") 
+// createTimeOutEvent(bpRecord2,"2014-12-5 1900")
 
 
-let bpRecord3 = createEmployeeRecord(["lisa", "simpson", "student", 5])
+// let bpRecord3 = createEmployeeRecord(["lisa", "simpson", "student", 5])
 
-createTimeInEvent(bpRecord3,"2015-02-24 1400") 
-createTimeOutEvent(bpRecord3,"2015-02-24 1600")
-createTimeInEvent(bpRecord3,"2015-01-1 0900") 
-createTimeOutEvent(bpRecord3,"2015-01-1 1000")
-createTimeInEvent(bpRecord3,"2015-11-5 0900") 
-createTimeOutEvent(bpRecord3,"2015-11-5 1900")
-createTimeInEvent(bpRecord3,"2015-10-15 1400") 
-createTimeOutEvent(bpRecord3,"2015-10-15 1600")
-createTimeInEvent(bpRecord3,"2015-11-1 0900") 
-createTimeOutEvent(bpRecord3,"2015-11-1 1000")
-createTimeInEvent(bpRecord3,"2015-12-5 0900") 
-createTimeOutEvent(bpRecord3,"2015-12-5 1900")
+// createTimeInEvent(bpRecord3,"2015-02-24 1400") 
+// createTimeOutEvent(bpRecord3,"2015-02-24 1600")
+// createTimeInEvent(bpRecord3,"2015-01-1 0900") 
+// createTimeOutEvent(bpRecord3,"2015-01-1 1000")
+// createTimeInEvent(bpRecord3,"2015-11-5 0900") 
+// createTimeOutEvent(bpRecord3,"2015-11-5 1900")
+// createTimeInEvent(bpRecord3,"2015-10-15 1400") 
+// createTimeOutEvent(bpRecord3,"2015-10-15 1600")
+// createTimeInEvent(bpRecord3,"2015-11-1 0900") 
+// createTimeOutEvent(bpRecord3,"2015-11-1 1000")
+// createTimeInEvent(bpRecord3,"2015-12-5 0900") 
+// createTimeOutEvent(bpRecord3,"2015-12-5 1900")
 
 
 
@@ -159,7 +159,7 @@ function wagesEarnedOnDate(bpRecord,dateGiven){
     // console.log(wage)
     // console.log(hoursWorked)
 
-    console.log(hoursWorked*wage)
+    // console.log(hoursWorked*wage)
 
     return hoursWorked*wage
 
@@ -206,29 +206,70 @@ function allWagesFor(bpRecord) {
 
 function calculatePayroll(arrayOfEmployees) {
 
-    const arrayOfDates =[]
+
+    let totalWages = 0;
    
     arrayOfEmployees.forEach(element => {
 
         let elementInEvents = element.timeInEvents
         
         for (let i = 0 ; i < elementInEvents.length ; i++){
+
+            const payDay = wagesEarnedOnDate(element,elementInEvents[i].date)
+            totalWages = totalWages+payDay;
             
-
-            arrayOfDates.push(elementInEvents[i].date)
-
         }
+    });    
+
+    console.log("Total wages are:" + " " +totalWages)
+    return totalWages;
     
+}
+// TESTING
+// calculatePayroll([bpRecord,bpRecord2,bpRecord3])
+
+
+function findEmployeeByFirstName (arrayOfEmployees,firstNameGiven){
+
+    const listOfEmployees = []
+    arrayOfEmployees.forEach(element => {
+
+        listOfEmployees.push(createEmployeeRecord(element))
+        
     });
-    
-    console.log(arrayOfDates)
 
 
-        // hoursWorkedOnDate(objectEmployee,dateGivenString)
+listOfEmployees.forEach(element => {
+
+    if(element.firstName === firstNameGiven){
+        console.log(element)
+        return element
+    } else {
+        console.log(undefined)
+        return undefined
+            
+}
+});
 
 
+
+
+
+    // listOfEmployees.filter(function(employee) {
+    //     if (employee.firstName === firstNameGiven){
+
+    //         console.log(employee.familyName)
+    //         return employee
+    //     } 
+    //     else {
+    //         console.log(undefined)
+    //         return undefined
+    //     }
+        
+        
+    // })
 
 }
 
-
-calculatePayroll([bpRecord,bpRecord2,bpRecord3])
+findEmployeeByFirstName([["Loki", "Laufeysson-Odinsson", "HR Representative", 35],
+["Natalia", "Romanov", "CEO", 150]],"Loki")
